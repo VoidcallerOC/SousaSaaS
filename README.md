@@ -1,41 +1,62 @@
-# Transform Your Online Presence
-
-Welcome to SousaSaaS, where I specialize in delivering stunning, custom websites designed to elevate your business and connect with your audience. My mission is to help businesses like yours thrive in the digital landscape with tailored design solutions that drive results.
-
-## Who Am I?
-I am Nick Sousa, a passionate freelance web designer with a commitment to creating functional, visually appealing websites. With years of experience in the industry, I work closely with my clients to understand their unique needs, ensuring that every project reflects their brand identity and achieves their objectives.
-
-## Services Offered
-I provide a range of web design services that cater to various business needs, including:
-- **Custom Web Design**: Beautifully designed websites that captivate your audience.
-- **E-commerce Solutions**: Build powerful online stores that drive sales.
-- **Landing Pages**: Optimize your marketing campaigns with high-converting landing pages.
-- **Ongoing Maintenance & Support**: Comprehensive support to keep your website updated and secure.
-
-## Pricing Packages
-I believe in transparent pricing to help you make informed decisions. Here are my service packages:
-
-| Website Type                        | Market Average Price | Recommended Price (20% Off) |
-|-------------------------------------|----------------------|------------------------------|
-| Landing Page                        | $1,500               | $1,200                       |
-| Multi-Page Business Site           | $5,000               | $4,000                       |
-| E-Commerce Site                     | $10,000              | $8,000                       |
-| SaaS Front End / On-chain Apps     | $25,000              | $20,000                      |
-
-## Why Hire Me?
-- **Personalized Approach**: I take the time to understand your business and tailor my designs to meet your specific needs.
-- **Quality Delivery**: I pride myself on delivering high-quality work that exceeds client expectations.
-- **Proven Results**: Many of my clients have seen increased engagement and conversions after launching their new websites.
-
-## Ideal Clients
-I typically work with local businesses in Connecticut, startups looking to create their first online presence, and established brands aiming to refresh their digital identity. If you’re looking to enhance your website’s impact, you’re in the right place!
-
-## How to Get in Touch
-Ready to transform your online presence? Let’s talk! You can reach me via:
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
-
-Looking forward to collaborating and making your vision a reality!
-
-Best,
-Nick Sousa
+IyBUcmFuc2Zvcm0gWW91ciBPbmxpbmUgUHJlc2VuY2UKCldlbGNvbWUgdG8g
+U291c2FTYWFTLCB3aGVyZSBJIHNwZWNpYWxpemUgaW4gZGVsaXZlcmluZyBz
+dHVubmluZywgY3VzdG9tIHdlYnNpdGVzIGRlc2lnbmVkIHRvIGVsZXZhdGUg
+eW91ciBidXNpbmVzcyBhbmQgY29ubmVjdCB3aXRoIHlvdXIgYXVkaWVuY2Uu
+IE15IG1pc3Npb24gaXMgdG8gaGVscCBidXNpbmVzc2VzIGxpa2UgeW91cnMg
+dGhyaXZlIGluIHRoZSBkaWdpdGFsIGxhbmRzY2FwZSB3aXRoIHRhaWxvcmVk
+IGRlc2lnbiBzb2x1dGlvbnMgdGhhdCBkcml2ZSByZXN1bHRzLgoKIyMgV2hv
+IEFtIEk/CkkgYW0gTmljayBTb3VzYSwgYSBwYXNzaW9uYXRlIGZyZWVsYW5j
+ZSB3ZWIgZGVzaWduZXIgd2l0aCBhIGNvbW1pdG1lbnQgdG8gY3JlYXRpbmcg
+ZnVuY3Rpb25hbCwgdmlzdWFsbHkgYXBwZWFsaW5nIHdlYnNpdGVzLiBXaXRo
+IHllYXJzIG9mIGV4cGVyaWVuY2UgaW4gdGhlIGluZHVzdHJ5LCBJIHdvcmsg
+Y2xvc2VseSB3aXRoIG15IGNsaWVudHMgdG8gdW5kZXJzdGFuZCB0aGVpciB1
+bmlxdWUgbmVlZHMsIGVuc3VyaW5nIHRoYXQgZXZlcnkgcHJvamVjdCByZWZs
+ZWN0cyB0aGVpciBicmFuZCBpZGVudGl0eSBhbmQgYWNoaWV2ZXMgdGhlaXIg
+b2JqZWN0aXZlcy4KCiMjIFNlcnZpY2VzIE9mZmVyZWQKSSBwcm92aWRlIGEg
+cmFuZ2Ugb2Ygd2ViIGRlc2lnbiBzZXJ2aWNlcyB0aGF0IGNhdGVyIHRvIHZh
+cmlvdXMgYnVzaW5lc3MgbmVlZHMsIGluY2x1ZGluZzoKLSAqKkN1c3RvbSBX
+ZWIgRGVzaWduKio6IEJlYXV0aWZ1bGx5IGRlc2lnbmVkIHdlYnNpdGVzIHRo
+YXQgY2FwdGl2YXRlIHlvdXIgYXVkaWVuY2UuCi0gKipFLWNvbW1lcmNlIFNv
+bHV0aW9ucyoqOiBCdWlsZCBwb3dlcmZ1bCBvbmxpbmUgc3RvcmVzIHRoYXQg
+ZHJpdmUgc2FsZXMuCi0gKipMYW5kaW5nIFBhZ2VzKio6IE9wdGltaXplIHlv
+dXIgbWFya2V0aW5nIGNhbXBhaWducyB3aXRoIGhpZ2gtY29udmVydGluZyBs
+YW5kaW5nIHBhZ2VzLgotICoqT25nb2luZyBNYWludGVuYW5jZSAmIFN1cHBv
+cnQqKjogQ29tcHJlaGVuc2l2ZSBzdXBwb3J0IHRvIGtlZXAgeW91ciB3ZWJz
+aXRlIHVwZGF0ZWQgYW5kIHNlY3VyZS4KCiMjIFByaWNpbmcgUGFja2FnZXMK
+SSBiZWxpZXZlIGluIHRyYW5zcGFyZW50IHByaWNpbmcgdG8gaGVscCB5b3Ug
+bWFrZSBpbmZvcm1lZCBkZWNpc2lvbnMuIEhlcmUgYXJlIG15IHNlcnZpY2Ug
+cGFja2FnZXM6Cgp8IFdlYnNpdGUgVHlwZSAgICAgICAgICAgICAgICAgICAg
+ICAgIHwgTWFya2V0IEF2ZXJhZ2UgUHJpY2UgfCBSZWNvbW1lbmRlZCBQcmlj
+ZSAoMjAlIE9mZikgfAp8LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLXwtLS0tLS0tLS0tLS0tLS0tLS0tLS0tfC0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLXwKfCBMYW5kaW5nIFBhZ2UgICAgICAgICAgICAg
+ICAgICAgICAgICB8ICQxLDUwMCAgICAgICAgICAgICAgIHwgJDEsMjAwICAg
+ICAgICAgICAgICAgICAgICAgICB8CnwgTXVsdGktUGFnZSBCdXNpbmVzcyBT
+aXRlICAgICAgICAgICB8ICQ1LDAwMCAgICAgICAgICAgICAgIHwgJDQsMDAw
+ICAgICAgICAgICAgICAgICAgICAgICB8CnwgRS1Db21tZXJjZSBTaXRlICAg
+ICAgICAgICAgICAgICAgICAgfCAkMTAsMDAwICAgICAgICAgICAgICB8ICQ4
+LDAwMCAgICAgICAgICAgICAgICAgICAgICAgfAp8IFNhYVMgRnJvbnQgRW5k
+IC8gT24tY2hhaW4gQXBwcyAgICAgfCAkMjUsMDAwICAgICAgICAgICAgICB8
+ICQyMCwwMDAgICAgICAgICAgICAgICAgICAgICAgfAoKIyMgV2h5IEhpcmUg
+TWU/Ci0gKipQZXJzb25hbGl6ZWQgQXBwcm9hY2gqKjogSSB0YWtlIHRoZSB0
+aW1lIHRvIHVuZGVyc3RhbmQgeW91ciBidXNpbmVzcyBhbmQgdGFpbG9yIG15
+IGRlc2lnbnMgdG8gbWVldCB5b3VyIHNwZWNpZmljIG5lZWRzLgotICoqUXVh
+bGl0eSBEZWxpdmVyeSoqOiBJIHByaWRlIG15c2VsZiBvbiBkZWxpdmVyaW5n
+IGhpZ2gtcXVhbGl0eSB3b3JrIHRoYXQgZXhjZWVkcyBjbGllbnQgZXhwZWN0
+YXRpb25zLgotICoqUHJvdmVuIFJlc3VsdHMqKjogTWFueSBvZiBteSBjbGll
+bnRzIGhhdmUgc2VlbiBpbmNyZWFzZWQgZW5nYWdlbWVudCBhbmQgY29udmVy
+c2lvbnMgYWZ0ZXIgbGF1bmNoaW5nIHRoZWlyIG5ldyB3ZWJzaXRlcy4KCiMj
+IElkZWFsIENsaWVudHMKSSB0eXBpY2FsbHkgd29yayB3aXRoIGxvY2FsIGJ1
+c2luZXNzZXMgaW4gQ29ubmVjdGljdXQsIHN0YXJ0dXBzIGxvb2tpbmcgdG8g
+Y3JlYXRlIHRoZWlyIGZpcnN0IG9ubGluZSBwcmVzZW5jZSwgYW5kIGVzdGFi
+bGlzaGVkIGJyYW5kcyBhaW1pbmcgdG8gcmVmcmVzaCB0aGVpciBkaWdpdGFs
+IGlkZW50aXR5LiBJZiB5b3XigJlyZSBsb29raW5nIHRvIGVuaGFuY2UgeW91
+ciB3ZWJzaXRl4oCZcyBpbXBhY3QsIHlvdeKAmXJlIGluIHRoZSByaWdodCBw
+bGFjZSEKCiMjIEhvdyB0byBHZXQgaW4gVG91Y2gKUmVhZHkgdG8gdHJhbnNm
+b3JtIHlvdXIgb25saW5lIHByZXNlbmNlPyBMZXTigJlzIHRhbGshIFlvdSBj
+YW4gcmVhY2ggbWUgdmlhOgotICoqRW1haWwqKjogW3lvdXItZW1haWxAZXhh
+bXBsZS5jb21dKG1haWx0bzp5b3VyLWVtYWlsQGV4YW1wbGUuY29tKQotICoq
+TGlua2VkSW4qKjogW1lvdXIgTGlua2VkSW4gUHJvZmlsZV0oaHR0cHM6Ly93
+d3cubGlua2VkaW4uY29tL2luL3lvdXJwcm9maWxlKQoKTG9va2luZyBmb3J3
+YXJkIHRvIGNvbGxhYm9yYXRpbmcgYW5kIG1ha2luZyB5b3VyIHZpc2lvbiBh
+IHJlYWxpdHkhCgpCZXN0LApOaWNrIFNvdXNh
