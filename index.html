@@ -1,44 +1,690 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Nick Sousa, a freelance web designer dedicated to helping small businesses enhance their online presence with stunning websites that drive results." />
-<title>SousaSaaS</title>
-<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Nick Sousa — independent design and build in Windsor, Connecticut. Sites for local shops, studios, and product teams. One person, start to finish, usually live in a week." />
+<meta name="theme-color" content="#0A0809" />
+<!-- Once the real URL is known, add: <link rel="canonical" href="https://your-domain/" />
+     and set og:url below to match. A canonical pointing at a domain that does
+     not resolve suppresses the site in search, so leave it out until then. -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0809'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23C21E28'/%3E%3C/svg%3E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nick Sousa — Design & Build" />
+<meta property="og:title" content="Nick Sousa — Sites that ship, and hold up" />
+<meta property="og:description" content="Independent design and build in Windsor, Connecticut. One person, start to finish, usually live in a week." />
+<meta name="twitter:card" content="summary" />
+<title>Nick Sousa Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+
+<style>
+:root{
+  --ink:#0A0809;
+  --ash:#161214;
+  --line:#2C2427;
+  --bone:#F2EDE2;
+  --smoke:#8A7F79;
+  --crimson:#C21E28;
+  --crimson-hot:#E03A3F;
+  --ghost:#4FD8E8;
+
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+
+  --page:clamp(1rem,4.5vw,4.5rem);
+  --max:74rem;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--body);
+  font-size:clamp(1rem,0.96rem + 0.2vw,1.125rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+#grain{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.05;
+  mix-blend-mode:screen;
+}
+main,header,footer{position:relative;z-index:1;}
+
+/* ---------- type ---------- */
+h1,h2,h3,.dsp{
+  font-family:var(--display);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.005em;
+  line-height:.92;
+  text-wrap:balance;
+  margin:0;
+}
+p{margin:0;}
+a{color:inherit;}
+.lede{font-size:clamp(1.125rem,1rem + 0.55vw,1.4rem);line-height:1.55;color:#DCD4C8;font-weight:300;max-width:34ch;}
+.prose{max-width:62ch;color:#CFC7BC;font-weight:300;}
+.label{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--smoke);
+  font-weight:500;
+}
+.num{font-variant-numeric:tabular-nums;}
+
+/* ---------- shell ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--page);}
+section{padding-block:clamp(4.5rem,9vw,8.5rem);border-top:1px solid var(--line);}
+.sec-head{display:grid;gap:1.25rem;margin-bottom:clamp(2.5rem,5vw,4rem);}
+.sec-head h2{font-size:clamp(2.25rem,1.4rem + 4vw,4.5rem);}
+
+.rail{display:grid;gap:clamp(1.5rem,3vw,3rem);}
+@media (min-width:64rem){
+  .rail{grid-template-columns:11rem 1fr;align-items:start;}
+  .rail > .rail-meta{position:sticky;top:5.5rem;}
+}
+.rail-meta{display:grid;gap:.5rem;align-content:start;}
+.rail-meta .rule{height:1px;background:var(--crimson);width:2rem;}
+
+/* ---------- nav ---------- */
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(10,8,9,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.75rem;}
+.mark{
+  font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.25rem;letter-spacing:.06em;text-decoration:none;position:relative;
+}
+.mark:hover{animation:split .5s steps(2,end) infinite;}
+@keyframes split{
+  0%{text-shadow:none;}
+  50%{text-shadow:-.045em 0 var(--crimson),.045em 0 var(--ghost);}
+  100%{text-shadow:none;}
+}
+.nav-links{display:none;gap:1.75rem;align-items:center;}
+@media (min-width:52rem){.nav-links{display:flex;}}
+.nav-links a{
+  font-family:var(--mono);font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;
+  text-decoration:none;color:var(--smoke);padding-block:.35rem;transition:color .18s;
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--bone);}
+.nav-links a.live{color:var(--bone);display:inline-flex;align-items:center;gap:.5rem;}
+.dot{width:.4rem;height:.4rem;border-radius:50%;background:var(--crimson);animation:pulse 2.4s ease-out infinite;}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(194,30,40,.6);}
+  70%{box-shadow:0 0 0 .5rem rgba(194,30,40,0);}
+  100%{box-shadow:0 0 0 0 rgba(194,30,40,0);}
+}
+
+/* ---------- hero ---------- */
+.hero{border-top:0;padding-block:clamp(4rem,11vw,9rem) clamp(3rem,6vw,5rem);}
+.hero h1{
+  font-size:clamp(3.25rem,1rem + 12vw,10rem);
+  letter-spacing:-.005em;
+  margin-block:1.5rem 2rem;
+}
+.hero h1 em{font-style:normal;color:var(--crimson);}
+.hero-grid{display:grid;gap:2.5rem;}
+@media (min-width:52rem){.hero-grid{grid-template-columns:1fr auto;align-items:end;}}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;}
+.btn{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
+  text-decoration:none;padding:.9rem 1.5rem;border:1px solid var(--crimson);
+  background:var(--crimson);color:var(--bone);
+  transition:background .18s,border-color .18s,transform .12s;
+}
+.btn:hover{background:var(--crimson-hot);border-color:var(--crimson-hot);}
+.btn:active{transform:translateY(1px);}
+.btn.ghost{background:transparent;color:var(--bone);border-color:var(--line);}
+.btn.ghost:hover{border-color:var(--bone);}
+
+/* ---------- proof strip ---------- */
+.proof{
+  position:relative;z-index:1;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding-block:clamp(2rem,4vw,3rem);
+}
+.proof-grid{display:grid;gap:2rem 1.5rem;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));}
+.stat .v{font-family:var(--display);font-weight:800;font-size:clamp(2.25rem,1.2rem + 3.2vw,3.5rem);line-height:.9;display:block;}
+.stat .v small{font-size:.42em;color:var(--smoke);margin-left:.35rem;letter-spacing:.04em;}
+.stat p{margin-top:.6rem;font-size:.9375rem;color:var(--smoke);font-weight:300;line-height:1.45;max-width:22ch;}
+
+/* ---------- work ---------- */
+.cases{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);}
+.case{
+  background:var(--ink);
+  display:grid;gap:1.5rem;
+  padding-block:clamp(1.75rem,3.5vw,2.75rem);
+  transition:background .2s;
+}
+@media (min-width:60rem){
+  .case{grid-template-columns:4rem 1fr 19rem;gap:2.5rem;align-items:start;padding-inline:clamp(1rem,2vw,2rem);}
+  .case:hover{background:var(--ash);}
+}
+.case-idx{font-family:var(--mono);font-size:.75rem;color:var(--crimson);letter-spacing:.1em;padding-top:.5rem;}
+.case h3{font-size:clamp(1.75rem,1.1rem + 2.4vw,2.75rem);}
+.case .kicker{margin-block:.5rem .9rem;}
+.case .prose{font-size:1rem;max-width:52ch;}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem;}
+.tag{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--smoke);border:1px solid var(--line);padding:.3rem .55rem;
+}
+.metrics{display:grid;gap:.85rem;align-content:start;}
+.metric{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:baseline;border-top:1px solid var(--line);padding-top:.6rem;}
+.metric b{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--bone);line-height:1;white-space:nowrap;}
+.metric span{font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--smoke);line-height:1.4;}
+.case-link{
+  display:inline-flex;gap:.6rem;align-items:center;margin-top:1.25rem;
+  font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--bone);text-decoration:none;border-bottom:1px solid var(--crimson);padding-bottom:.3rem;
+}
+.case-link:hover{color:var(--crimson-hot);}
+
+/* ---------- capabilities ---------- */
+.caps{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);}
+@media (min-width:44rem){.caps{grid-template-columns:repeat(2,1fr);}}
+@media (min-width:70rem){.caps{grid-template-columns:repeat(4,1fr);}}
+.cap{background:var(--ink);padding:1.75rem 1.5rem;display:grid;gap:.9rem;align-content:start;}
+.cap h3{font-size:1.375rem;}
+.cap ul{margin:0;padding:0;list-style:none;display:grid;gap:.5rem;}
+.cap li{font-size:.9375rem;font-weight:300;color:#CFC7BC;padding-left:1rem;position:relative;line-height:1.45;}
+.cap li::before{content:"";position:absolute;left:0;top:.65em;width:.35rem;height:1px;background:var(--crimson);}
+
+/* ---------- process ---------- */
+.steps{display:grid;}
+.step{display:grid;gap:.75rem 2rem;padding-block:1.75rem;border-top:1px solid var(--line);}
+@media (min-width:52rem){.step{grid-template-columns:3.5rem 14rem 1fr;align-items:baseline;}}
+.step:last-child{border-bottom:1px solid var(--line);}
+.step .n{font-family:var(--mono);font-size:.75rem;color:var(--crimson);letter-spacing:.1em;}
+.step h3{font-size:1.5rem;}
+.step p{font-size:.9375rem;color:#CFC7BC;font-weight:300;max-width:52ch;}
+.step .dur{display:block;margin-top:.4rem;}
+
+/* ---------- engagements ---------- */
+.tiers{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);}
+@media (min-width:56rem){.tiers{grid-template-columns:repeat(3,1fr);}}
+.tier{background:var(--ink);padding:clamp(1.5rem,3vw,2.25rem);display:grid;gap:1.1rem;align-content:start;}
+.tier.mid{background:var(--ash);}
+.tier h3{font-size:1.75rem;}
+.tier .price{font-family:var(--display);font-weight:600;font-size:2.5rem;line-height:1;color:var(--crimson);}
+.tier .price small{font-family:var(--mono);font-size:.625rem;letter-spacing:.16em;color:var(--smoke);display:block;margin-bottom:.5rem;font-weight:400;text-transform:uppercase;}
+.tier ul{margin:0;padding:0;list-style:none;display:grid;gap:.55rem;}
+.tier li{font-size:.9375rem;font-weight:300;color:#CFC7BC;padding-left:1.1rem;position:relative;}
+.tier li::before{content:"\2014";position:absolute;left:0;color:var(--smoke);}
+
+.terms{display:grid;gap:1.75rem 2.5rem;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));}
+.term{display:grid;gap:.5rem;align-content:start;border-top:1px solid var(--line);padding-top:.9rem;}
+.term p:last-child{font-size:.9375rem;font-weight:300;color:#CFC7BC;line-height:1.5;}
+.term b{font-weight:400;color:var(--bone);}
+
+/* ---------- contact ---------- */
+.contact h2{font-size:clamp(2.5rem,1rem + 7vw,6.5rem);}
+.contact-grid{display:grid;gap:2.5rem;margin-top:2.5rem;}
+@media (min-width:52rem){.contact-grid{grid-template-columns:1fr 1fr;}}
+.chan{display:grid;gap:.9rem;}
+.chan a{
+  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;flex-wrap:wrap;
+  text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:.7rem;transition:border-color .18s;
+}
+.chan a:hover{border-color:var(--crimson);}
+.chan .k{font-family:var(--mono);font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);}
+.chan .v{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:1.375rem;word-break:break-word;}
+
+footer{border-top:1px solid var(--line);padding-block:2.5rem;}
+.foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(1.25rem);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1);}
+.rise.in{opacity:1;transform:none;}
+:focus-visible{outline:2px solid var(--crimson-hot);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;}
+  .rise{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
 </head>
-<body class="wrapper nav">
-<h1>Transform Your Online Presence</h1>
-<p>I'm Nick Sousa, a passionate freelance web designer creating functional, visually appealing websites that connect you to your audience. My mission is to help businesses like yours thrive in the digital landscape.</p>
-<section>
-<h2>Who I Am</h2>
-<p>I'm a passionate web designer dedicated to bringing your ideas to life through captivating design and seamless functionality.</p>
-</section>
-<section>
-<h2>What I Offer</h2>
-<p>Services include:</p>
-<ul>
-<li>Custom Web Design tailored to your brand</li>
-<li>E-commerce Solutions for selling online</li>
-<li>Content Management Systems for easy updates</li>
-</ul>
-</section>
-<section>
-<h2>Pricing</h2>
-<ul>
-<li>Landing Page — $1,200</li>
-<li>E-commerce Website — $4,000</li>
-<li>Multi-Page Business Site — $8,000</li>
-<li>Ongoing Maintenance & Support — $60/month</li>
-<li>Care Plan (Active Product Work) — $1,200/month</li>
-</ul>
-</section>
-<section>
-<h2>Ready to Elevate Your Brand?</h2>
-<p>Contact me today for a free consultation and let's create something amazing together!</p>
-</section>
+<body>
+
+<canvas id="grain" aria-hidden="true"></canvas>
+
+<header>
+  <div class="wrap nav">
+    <a class="mark" href="#top">Nick Sousa</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#process">Process</a>
+      <a href="#engagements">Engagements</a>
+      <a class="live" href="#contact"><span class="dot" aria-hidden="true"></span>Available now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="label">Independent design & build — Windsor, Connecticut</p>
+          <h1>Sites that<br>ship, and<br><em>hold up</em>.</h1>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Start a project</a>
+            <a class="btn ghost" href="#work">See the work</a>
+          </div>
+        </div>
+        <p class="lede">I build sites for Connecticut businesses — shops, studios, and people who sell something they care about — plus the occasional product front end and on-chain build. One person, start to finish, and usually live in a week.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="proof">
+    <div class="wrap proof-grid">
+      <div class="stat rise">
+        <span class="v num">3</span>
+        <p>Connecticut businesses with a working site waiting for them</p>
+      </div>
+      <div class="stat rise">
+        <span class="v num">1<small>DAY</small></span>
+        <p>from first look at a business to a deployed site</p>
+      </div>
+      <div class="stat rise">
+        <span class="v num">477</span>
+        <p>holders on a product I designed, built, and still run</p>
+      </div>
+      <div class="stat rise">
+        <span class="v num">62<small>MB</small></span>
+        <p>site payload, cut from 209MB without losing an asset</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="rail">
+        <div class="rail-meta">
+          <div class="rule"></div>
+          <p class="label">Selected work</p>
+          <p class="label num">2024 — 2026</p>
+        </div>
+        <div>
+          <div class="sec-head">
+            <h2>Things I built<br>and shipped</h2>
+            <p class="prose">The first three are spec builds: I saw a Connecticut business that deserved a better site, built one, and sent them the link. No invoice attached, no obligation. That is also how I would rather work with you — you see the real thing before you decide anything. The rest are my own projects, where I taught myself the harder parts.</p>
+          </div>
+
+          <div class="cases">
+
+            <article class="case rise">
+              <div class="case-idx">01</div>
+              <div>
+                <h3>SOS Boss</h3>
+                <p class="label kicker">Photography portfolio + booking — Karol Sosnowski, Connecticut</p>
+                <p class="prose">A working photographer with four very different bodies of work — unposed airsoft, cars in motion, golden-hour portraits, and location shoots — and no single place to send people. I built a filterable gallery that keeps those categories separate without splitting the site, a booking form that goes straight to his inbox, and a private client entrance that sits alongside his existing ShootProof galleries instead of forcing a migration. Concept to live URL in one day.</p>
+                <div class="tags"><span class="tag">Spec build</span><span class="tag">Gallery UX</span><span class="tag">Booking flow</span><span class="tag">One-day build</span></div>
+                <a class="case-link" href="https://the-sos-boss.vercel.app/" target="_blank" rel="noopener">Visit the live site →</a>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b class="num">1 day</b><span>concept to deployed site</span></div>
+                <div class="metric"><b class="num">4</b><span>portfolio categories, one filter</span></div>
+                <div class="metric"><b>Zero</b><span>migration off his existing galleries</span></div>
+              </div>
+            </article>
+
+            <article class="case rise">
+              <div class="case-idx">02</div>
+              <div>
+                <h3>M&J Video Games</h3>
+                <p class="label kicker">Retro game & collectibles shop — Southington, Connecticut</p>
+                <p class="prose">A shop trading everything from Atari carts to PS5, plus figures, cards, and wrestling memorabilia, running on word of mouth and an eBay page. The site gives the inventory a browsable home, spells out the buy-sell-trade terms that used to be explained at the counter every time, and puts the address, hours, and phone number where a phone can find them. Arcade-cabinet type treatment, because the audience came for the nostalgia.</p>
+                <div class="tags"><span class="tag">Spec build</span><span class="tag">Local retail</span><span class="tag">Catalog UX</span><span class="tag">Trade-in flow</span></div>
+                <a class="case-link" href="https://mj-video-games.vercel.app/" target="_blank" rel="noopener">Visit the live site →</a>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b class="num">2014</b><span>trading since — no site until this build</span></div>
+                <div class="metric"><b class="num">5</b><span>product categories, one browse</span></div>
+                <div class="metric"><b>Counter</b><span>trade-in rules published, not repeated</span></div>
+              </div>
+            </article>
+
+            <article class="case rise">
+              <div class="case-idx">03</div>
+              <div>
+                <h3>Thousand Sunny Cards</h3>
+                <p class="label kicker">Trading cards & collectibles — West Hartford, Connecticut</p>
+                <p class="prose">A card shop whose real assets are physical: a life-size Luffy at the door, purple walls, communal tables for tournaments, and a showcase of graded slabs. So the site is built around the room rather than a product grid — sections for the space, the play area, and the case, with buy-sell-trade-collect stated plainly up top and the show schedule pointing at their socials instead of going stale.</p>
+                <div class="tags"><span class="tag">Spec build</span><span class="tag">Local retail</span><span class="tag">Place-led layout</span><span class="tag">Community</span></div>
+                <a class="case-link" href="https://thousand-sunny-cards.vercel.app/" target="_blank" rel="noopener">Visit the live site →</a>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b class="num">4</b><span>services stated in four words</span></div>
+                <div class="metric"><b>Room</b><span>led the layout, not a product grid</span></div>
+                <div class="metric"><b>Live</b><span>schedule routed to socials, never stale</span></div>
+              </div>
+            </article>
+
+            <article class="case rise">
+              <div class="case-idx">04</div>
+              <div>
+                <h3>Voidcaller</h3>
+                <p class="label kicker">Brand system + on-chain music release — React / Vite</p>
+                <p class="prose">A full identity and site for an on-chain metalcore project: brand bible, custom display face, grain and glitch treatment, and a release engine that runs timed drop windows with no backend. The audio player gates full tracks against NFT ownership and falls back to energy-detected 30-second previews for everyone else.</p>
+                <div class="tags"><span class="tag">Brand system</span><span class="tag">React</span><span class="tag">Web3</span><span class="tag">Audio</span><span class="tag">Type design</span></div>
+                <a class="case-link" href="https://voidcaller.enterthegrotto.xyz" target="_blank" rel="noopener">Visit the live site →</a>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b class="num">1,620</b><span>tokens minted on the debut release</span></div>
+                <div class="metric"><b class="num">17–25×</b><span>secondary floor over mint, two years on</span></div>
+                <div class="metric"><b class="num">70%</b><span>asset weight cut — 124MB of GIFs transcoded out</span></div>
+              </div>
+            </article>
+
+            <article class="case rise">
+              <div class="case-idx">05</div>
+              <div>
+                <h3>The Reliquary</h3>
+                <p class="label kicker">On-chain collection viewer + transfer flow</p>
+                <p class="prose">A wallet-connected page where holders see everything they own across two chains and move it without leaving the site. Wallet detection follows the EIP-6963 standard, so it works with whatever the visitor actually has installed instead of assuming MetaMask. Contract calls are hand-rolled against the raw provider — no ethers, no wagmi, nothing to break on a dependency bump.</p>
+                <div class="tags"><span class="tag">EIP-6963</span><span class="tag">ERC-1155</span><span class="tag">Cross-chain</span><span class="tag">Vitest</span></div>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b class="num">2</b><span>chains read in one interface</span></div>
+                <div class="metric"><b class="num">0</b><span>packages added to the bundle</span></div>
+                <div class="metric"><b>Unit</b><span>tests across the contract layer</span></div>
+              </div>
+            </article>
+
+            <article class="case rise">
+              <div class="case-idx">06</div>
+              <div>
+                <h3>Autonomous Agent</h3>
+                <p class="label kicker">LLM agent with a wallet and persistent memory</p>
+                <p class="prose">A self-directed agent that holds its own keys, keeps long-term memory between runs, and executes on-chain actions inside hard spending limits. Built to prove out a pattern I now offer clients: an assistant that can actually do the task rather than describe it, with the guardrails written before the capabilities.</p>
+                <div class="tags"><span class="tag">Agents</span><span class="tag">Solana</span><span class="tag">Memory</span><span class="tag">Guardrails</span></div>
+              </div>
+              <div class="metrics">
+                <div class="metric"><b>Devnet</b><span>verified end to end before mainnet keys</span></div>
+                <div class="metric"><b>Capped</b><span>spend limits enforced at the wallet layer</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="rail">
+        <div class="rail-meta">
+          <div class="rule"></div>
+          <p class="label">Capabilities</p>
+        </div>
+        <div>
+          <div class="sec-head">
+            <h2>What you're<br>hiring</h2>
+            <p class="prose">Design and engineering from the same person. The spacing survives the build, the animation is budgeted against load time, and nobody says "that's not possible" three weeks in.</p>
+          </div>
+          <div class="caps">
+            <div class="cap rise">
+              <h3>Design</h3>
+              <ul>
+                <li>Brand systems and identity</li>
+                <li>Type selection and custom glyph work</li>
+                <li>Design tokens and component libraries</li>
+                <li>Art direction for motion and imagery</li>
+              </ul>
+            </div>
+            <div class="cap rise">
+              <h3>Build</h3>
+              <ul>
+                <li>React and Vite front ends</li>
+                <li>Marketing sites and landing pages</li>
+                <li>Booking, contact, and catalog flows</li>
+                <li>SaaS dashboards and product UI</li>
+                <li>Accessible, keyboard-complete interfaces</li>
+              </ul>
+            </div>
+            <div class="cap rise">
+              <h3>On-chain</h3>
+              <ul>
+                <li>Wallet connection and multi-wallet support</li>
+                <li>ERC-1155 and ERC-721 read/write flows</li>
+                <li>Token-gated content and media</li>
+                <li>Mint pages and timed drop mechanics</li>
+              </ul>
+            </div>
+            <div class="cap rise">
+              <h3>Performance</h3>
+              <ul>
+                <li>Asset pipelines and media transcoding</li>
+                <li>Bundle and payload reduction</li>
+                <li>Core Web Vitals remediation</li>
+                <li>Test coverage on the parts that matter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="rail">
+        <div class="rail-meta">
+          <div class="rule"></div>
+          <p class="label">How it runs</p>
+        </div>
+        <div>
+          <div class="sec-head">
+            <h2>Four steps,<br>in order</h2>
+            <p class="prose">No discovery theater. You see something real on a screen within days, and every stage after that revises a working thing instead of a document about one. Timings below are for a full site; a single landing page compresses to under a week.</p>
+          </div>
+          <div class="steps">
+            <div class="step rise">
+              <span class="n">01</span>
+              <div><h3>Scope</h3><span class="label dur">Day 1 — $750, credited</span></div>
+              <p>A paid working session where we pin down what the site has to do, who it talks to, and what counts as success. You leave with a written scope and a fixed price, and the $750 comes off the project total if we go ahead. If we are not a fit, we find out on day one — not one quarter in.</p>
+            </div>
+            <div class="step rise">
+              <span class="n">02</span>
+              <div><h3>Direction</h3><span class="label dur">Days 2–4</span></div>
+              <p>One direction, built in the browser at full fidelity — not three static comps to pick between. You react to the real thing on your real device, usually before the first week is out. Two rounds of revision are built into this stage.</p>
+            </div>
+            <div class="step rise">
+              <span class="n">03</span>
+              <div><h3>Build</h3><span class="label dur">Week 2</span></div>
+              <p>The full site or product on a staging URL you can check any day of the week. Content, responsive behavior, accessibility, a performance budget, and tests on whatever logic is load-bearing.</p>
+            </div>
+            <div class="step rise">
+              <span class="n">04</span>
+              <div><h3>Launch</h3><span class="label dur">Week 3, then 30 days</span></div>
+              <p>Deploy, analytics, and a handoff walkthrough recorded so you can rewatch it, plus thirty days of fixes included. After that you either run it yourself or keep me on retainer — your call, no default.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="engagements">
+    <div class="wrap">
+      <div class="rail">
+        <div class="rail-meta">
+          <div class="rule"></div>
+          <p class="label">Engagements</p>
+        </div>
+        <div>
+          <div class="sec-head">
+            <h2>Fixed price,<br>fixed scope</h2>
+            <p class="prose">Every project is quoted flat after the scope session. No hourly billing and no surprise invoice — if I estimate wrong, that is mine to absorb.</p>
+          </div>
+          <div class="tiers">
+            <div class="tier rise">
+              <h3>Local Business</h3>
+              <p class="price"><small>Starting at</small>$2,500</p>
+              <ul>
+                <li>Everything a shop needs: hours, map, contact</li>
+                <li>Photo gallery or product categories</li>
+                <li>Booking or inquiry form to your inbox</li>
+                <li>Fast on a phone, findable on Google</li>
+                <li>Analytics and deploy included</li>
+                <li>Live in a week</li>
+              </ul>
+            </div>
+            <div class="tier mid rise">
+              <h3>Site & System</h3>
+              <p class="price"><small>Starting at</small>$7,500</p>
+              <ul>
+                <li>Full multi-page site</li>
+                <li>Brand system and design tokens</li>
+                <li>Reusable component library</li>
+                <li>CMS or structured content layer</li>
+                <li>Performance budget enforced</li>
+                <li>Live in 2–3 weeks</li>
+              </ul>
+            </div>
+            <div class="tier rise">
+              <h3>Product</h3>
+              <p class="price"><small>Starting at</small>$20,000</p>
+              <ul>
+                <li>SaaS front end or on-chain app</li>
+                <li>Auth, wallet, or token gating</li>
+                <li>Dashboard and data interfaces</li>
+                <li>Test coverage on core logic</li>
+                <li>Ongoing retainer available</li>
+                <li>Payable in USD or USDC, settled 1:1</li>
+                <li>Live in 4–6 weeks</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="terms">
+            <div class="term rise">
+              <p class="label">Add-on — token gating</p>
+              <p>Wallet connection, ownership checks, gated media, or a timed mint page bolted onto any tier. <b>+$3,500–6,000</b> depending on chain count and contract complexity. If your treasury is on-chain, <b>USDC works</b> — quoted in USD, settled 1:1, network agreed in writing first.</p>
+            </div>
+            <div class="term rise">
+              <p class="label">Rush — 72 hours</p>
+              <p>You have a launch, a pitch, or a deadline. Brief in the morning, live inside three days, everything else on my desk pushed back. <b>+50%</b>, one slot at a time.</p>
+            </div>
+            <div class="term rise">
+              <p class="label">Care plan</p>
+              <p>Hosting watched, updates applied, and small changes — new hours, new photos, a price change — done same week. <b>$75/month</b> for a local site — or $750 a year prepaid — and <b>$1,500/month</b> for active product work. Cancel whenever.</p>
+            </div>
+            <div class="term rise">
+              <p class="label">Terms</p>
+              <p>Half up front, half on launch. Two revision rounds per stage are included; anything past that is quoted before I start it. <b>No hourly billing.</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="label">Available now — taking new projects</p>
+      <h2>Tell me what<br>you're building</h2>
+      <div class="contact-grid">
+        <p class="prose">Send the shape of it: what it is, who it is for, when it has to be live, and roughly what you have set aside. I answer every serious inquiry within two business days, including the ones I turn down.</p>
+        <div class="chan">
+          <a href="mailto:VoidcallerOC@gmail.com">
+            <span class="k">Email</span><span class="v">VoidcallerOC@gmail.com</span>
+          </a>
+          <a href="https://x.com/NickS0usa" target="_blank" rel="noopener">
+            <span class="k">X</span><span class="v">@NickS0usa</span>
+          </a>
+          <a href="https://voidcaller.enterthegrotto.xyz" target="_blank" rel="noopener">
+            <span class="k">Live build</span><span class="v">Voidcaller</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <footer>
-<p>Ready to get started? Book your free consultation today!</p>
+  <div class="wrap foot">
+    <p class="label">Nick Sousa — Design & Build</p>
+    <p class="label num">Windsor, CT · EST</p>
+  </div>
 </footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* film grain */
+  var c = document.getElementById('grain');
+  if (c && c.getContext) {
+    var ctx = c.getContext('2d');
+    var draw = function(){
+      var w = c.width = Math.ceil(window.innerWidth / 2);
+      var h = c.height = Math.ceil(window.innerHeight / 2);
+      var img = ctx.createImageData(w, h);
+      var d = img.data;
+      for (var i = 0; i < d.length; i += 4) {
+        var v = (Math.random() * 255) | 0;
+        d[i] = d[i + 1] = d[i + 2] = v;
+        d[i + 3] = 255;
+      }
+      ctx.putImageData(img, 0, 0);
+    };
+    draw();
+    var t;
+    window.addEventListener('resize', function(){
+      clearTimeout(t);
+      t = setTimeout(draw, 200);
+    });
+  }
+
+  /* scroll reveal */
+  var els = document.querySelectorAll('.rise');
+  var revealAll = function(){
+    Array.prototype.forEach.call(els, function(el){ el.classList.add('in'); });
+  };
+  if (!('IntersectionObserver' in window) || reduce) {
+    revealAll();
+    return;
+  }
+  /* failsafe: never leave content hidden if the observer never fires */
+  setTimeout(revealAll, 2500);
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        var sibs = Array.prototype.slice.call(e.target.parentNode.children);
+        var i = Math.min(sibs.indexOf(e.target), 5);
+        e.target.style.transitionDelay = (i * 70) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+  Array.prototype.forEach.call(els, function(el){ io.observe(el); });
+})();
+</script>
+
 </body>
 </html>
