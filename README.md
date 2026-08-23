@@ -5,7 +5,7 @@ Custom Web Design Solutions Tailored for Small Businesses and Startups in Connec
 
 ---
 
-Hello, I’m [Your Name], a professional freelance web designer with a passion for creating beautiful and effective websites that drive results. My goal is to help your business shine online, translating your vision into a captivating web presence.  
+Hello, I’m Nick, a professional freelance web designer with a passion for creating beautiful and effective websites that drive results. My goal is to help your business shine online, translating your vision into a captivating web presence.  
 
 ### Who I Serve
 I specialize in partnering with small businesses and startups in the following sectors:
@@ -25,9 +25,6 @@ I specialize in partnering with small businesses and startups in the following s
 - **Transparent Pricing:** I offer clear pricing with no hidden costs, ensuring you know what to expect at every stage of the project.
 - **Proven Results:** I have helped numerous clients achieve their online goals, leading to higher conversions and increased brand visibility.
 
-### What My Clients Say
-> "Working with SousaSaaS transformed our website and increased our leads by 50%! Highly recommend!" - [Client Name, Business]
-
 ### My Process
 1. **Discovery:** We start with a consultation to discuss your goals and vision.
 2. **Design & Develop:** I create mockups and build your website, incorporating your feedback throughout.
@@ -41,4 +38,4 @@ I specialize in partnering with small businesses and startups in the following s
 
 ---
 
-[Contact Us](mailto:support@sousasaas.com) for inquiries or to discuss your project in detail. I can’t wait to work together to create something amazing!
+[Contact Us](mailto:voidcalleroc@gmail.com) for inquiries or to discuss your project in detail. I can’t wait to work together to create something amazing!
