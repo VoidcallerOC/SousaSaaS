@@ -1,62 +1,42 @@
-IyBUcmFuc2Zvcm0gWW91ciBPbmxpbmUgUHJlc2VuY2UKCldlbGNvbWUgdG8g
-U291c2FTYWFTLCB3aGVyZSBJIHNwZWNpYWxpemUgaW4gZGVsaXZlcmluZyBz
-dHVubmluZywgY3VzdG9tIHdlYnNpdGVzIGRlc2lnbmVkIHRvIGVsZXZhdGUg
-eW91ciBidXNpbmVzcyBhbmQgY29ubmVjdCB3aXRoIHlvdXIgYXVkaWVuY2Uu
-IE15IG1pc3Npb24gaXMgdG8gaGVscCBidXNpbmVzc2VzIGxpa2UgeW91cnMg
-dGhyaXZlIGluIHRoZSBkaWdpdGFsIGxhbmRzY2FwZSB3aXRoIHRhaWxvcmVk
-IGRlc2lnbiBzb2x1dGlvbnMgdGhhdCBkcml2ZSByZXN1bHRzLgoKIyMgV2hv
-IEFtIEk/CkkgYW0gTmljayBTb3VzYSwgYSBwYXNzaW9uYXRlIGZyZWVsYW5j
-ZSB3ZWIgZGVzaWduZXIgd2l0aCBhIGNvbW1pdG1lbnQgdG8gY3JlYXRpbmcg
-ZnVuY3Rpb25hbCwgdmlzdWFsbHkgYXBwZWFsaW5nIHdlYnNpdGVzLiBXaXRo
-IHllYXJzIG9mIGV4cGVyaWVuY2UgaW4gdGhlIGluZHVzdHJ5LCBJIHdvcmsg
-Y2xvc2VseSB3aXRoIG15IGNsaWVudHMgdG8gdW5kZXJzdGFuZCB0aGVpciB1
-bmlxdWUgbmVlZHMsIGVuc3VyaW5nIHRoYXQgZXZlcnkgcHJvamVjdCByZWZs
-ZWN0cyB0aGVpciBicmFuZCBpZGVudGl0eSBhbmQgYWNoaWV2ZXMgdGhlaXIg
-b2JqZWN0aXZlcy4KCiMjIFNlcnZpY2VzIE9mZmVyZWQKSSBwcm92aWRlIGEg
-cmFuZ2Ugb2Ygd2ViIGRlc2lnbiBzZXJ2aWNlcyB0aGF0IGNhdGVyIHRvIHZh
-cmlvdXMgYnVzaW5lc3MgbmVlZHMsIGluY2x1ZGluZzoKLSAqKkN1c3RvbSBX
-ZWIgRGVzaWduKio6IEJlYXV0aWZ1bGx5IGRlc2lnbmVkIHdlYnNpdGVzIHRo
-YXQgY2FwdGl2YXRlIHlvdXIgYXVkaWVuY2UuCi0gKipFLWNvbW1lcmNlIFNv
-bHV0aW9ucyoqOiBCdWlsZCBwb3dlcmZ1bCBvbmxpbmUgc3RvcmVzIHRoYXQg
-ZHJpdmUgc2FsZXMuCi0gKipMYW5kaW5nIFBhZ2VzKio6IE9wdGltaXplIHlv
-dXIgbWFya2V0aW5nIGNhbXBhaWducyB3aXRoIGhpZ2gtY29udmVydGluZyBs
-YW5kaW5nIHBhZ2VzLgotICoqT25nb2luZyBNYWludGVuYW5jZSAmIFN1cHBv
-cnQqKjogQ29tcHJlaGVuc2l2ZSBzdXBwb3J0IHRvIGtlZXAgeW91ciB3ZWJz
-aXRlIHVwZGF0ZWQgYW5kIHNlY3VyZS4KCiMjIFByaWNpbmcgUGFja2FnZXMK
-SSBiZWxpZXZlIGluIHRyYW5zcGFyZW50IHByaWNpbmcgdG8gaGVscCB5b3Ug
-bWFrZSBpbmZvcm1lZCBkZWNpc2lvbnMuIEhlcmUgYXJlIG15IHNlcnZpY2Ug
-cGFja2FnZXM6Cgp8IFdlYnNpdGUgVHlwZSAgICAgICAgICAgICAgICAgICAg
-ICAgIHwgTWFya2V0IEF2ZXJhZ2UgUHJpY2UgfCBSZWNvbW1lbmRlZCBQcmlj
-ZSAoMjAlIE9mZikgfAp8LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLXwtLS0tLS0tLS0tLS0tLS0tLS0tLS0tfC0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLXwKfCBMYW5kaW5nIFBhZ2UgICAgICAgICAgICAg
-ICAgICAgICAgICB8ICQxLDUwMCAgICAgICAgICAgICAgIHwgJDEsMjAwICAg
-ICAgICAgICAgICAgICAgICAgICB8CnwgTXVsdGktUGFnZSBCdXNpbmVzcyBT
-aXRlICAgICAgICAgICB8ICQ1LDAwMCAgICAgICAgICAgICAgIHwgJDQsMDAw
-ICAgICAgICAgICAgICAgICAgICAgICB8CnwgRS1Db21tZXJjZSBTaXRlICAg
-ICAgICAgICAgICAgICAgICAgfCAkMTAsMDAwICAgICAgICAgICAgICB8ICQ4
-LDAwMCAgICAgICAgICAgICAgICAgICAgICAgfAp8IFNhYVMgRnJvbnQgRW5k
-IC8gT24tY2hhaW4gQXBwcyAgICAgfCAkMjUsMDAwICAgICAgICAgICAgICB8
-ICQyMCwwMDAgICAgICAgICAgICAgICAgICAgICAgfAoKIyMgV2h5IEhpcmUg
-TWU/Ci0gKipQZXJzb25hbGl6ZWQgQXBwcm9hY2gqKjogSSB0YWtlIHRoZSB0
-aW1lIHRvIHVuZGVyc3RhbmQgeW91ciBidXNpbmVzcyBhbmQgdGFpbG9yIG15
-IGRlc2lnbnMgdG8gbWVldCB5b3VyIHNwZWNpZmljIG5lZWRzLgotICoqUXVh
-bGl0eSBEZWxpdmVyeSoqOiBJIHByaWRlIG15c2VsZiBvbiBkZWxpdmVyaW5n
-IGhpZ2gtcXVhbGl0eSB3b3JrIHRoYXQgZXhjZWVkcyBjbGllbnQgZXhwZWN0
-YXRpb25zLgotICoqUHJvdmVuIFJlc3VsdHMqKjogTWFueSBvZiBteSBjbGll
-bnRzIGhhdmUgc2VlbiBpbmNyZWFzZWQgZW5nYWdlbWVudCBhbmQgY29udmVy
-c2lvbnMgYWZ0ZXIgbGF1bmNoaW5nIHRoZWlyIG5ldyB3ZWJzaXRlcy4KCiMj
-IElkZWFsIENsaWVudHMKSSB0eXBpY2FsbHkgd29yayB3aXRoIGxvY2FsIGJ1
-c2luZXNzZXMgaW4gQ29ubmVjdGljdXQsIHN0YXJ0dXBzIGxvb2tpbmcgdG8g
-Y3JlYXRlIHRoZWlyIGZpcnN0IG9ubGluZSBwcmVzZW5jZSwgYW5kIGVzdGFi
-bGlzaGVkIGJyYW5kcyBhaW1pbmcgdG8gcmVmcmVzaCB0aGVpciBkaWdpdGFs
-IGlkZW50aXR5LiBJZiB5b3XigJlyZSBsb29raW5nIHRvIGVuaGFuY2UgeW91
-ciB3ZWJzaXRl4oCZcyBpbXBhY3QsIHlvdeKAmXJlIGluIHRoZSByaWdodCBw
-bGFjZSEKCiMjIEhvdyB0byBHZXQgaW4gVG91Y2gKUmVhZHkgdG8gdHJhbnNm
-b3JtIHlvdXIgb25saW5lIHByZXNlbmNlPyBMZXTigJlzIHRhbGshIFlvdSBj
-YW4gcmVhY2ggbWUgdmlhOgotICoqRW1haWwqKjogW3lvdXItZW1haWxAZXhh
-bXBsZS5jb21dKG1haWx0bzp5b3VyLWVtYWlsQGV4YW1wbGUuY29tKQotICoq
-TGlua2VkSW4qKjogW1lvdXIgTGlua2VkSW4gUHJvZmlsZV0oaHR0cHM6Ly93
-d3cubGlua2VkaW4uY29tL2luL3lvdXJwcm9maWxlKQoKTG9va2luZyBmb3J3
-YXJkIHRvIGNvbGxhYm9yYXRpbmcgYW5kIG1ha2luZyB5b3VyIHZpc2lvbiBh
-IHJlYWxpdHkhCgpCZXN0LApOaWNrIFNvdXNh
+# SousaSaaS: Tailored Web Solutions for Your Business
+
+Welcome to SousaSaaS! We specialize in creating bespoke web designs that elevate your brand and connect with your audience. Whether you're a startup or an established business, we're here to help you thrive online.
+
+## Who I Am
+I'm a passionate web designer dedicated to bringing your ideas to life through captivating design and seamless functionality.
+
+## Services Offered
+- **Custom Web Design**
+- **E-commerce Solutions**
+- **Content Management Systems**
+
+## Pricing
+| Website Type                     | Market Average Price | Recommended Price (-20%) |
+|----------------------------------|----------------------|---------------------------|
+| Landing Page                     | $1,500               | $1,200                    |
+| E-commerce Website               | $5,000               | $4,000                    |
+| Multi-Page Business Site         | $10,000              | $8,000                    |
+| Ongoing Maintenance & Support     | $75/month            | $60/month                 |
+| Care Plan (Active Product Work)   | $1,500/month         | $1,200/month              |
+
+## Who I Work With
+From local businesses to global brands, I have experience working with a diverse range of clients, understanding their unique needs, and delivering results that matter.
+
+## Process
+1. **Discovery**: Understand your goals and vision.
+2. **Design**: Create a custom design tailored to your brand.
+3. **Development**: Build a fully functional website.
+4. **Launch**: Go live and ensure everything is working as expected.
+5. **Support**: Provide ongoing support to keep your site updated and secure.
+
+## Testimonials
+- "SousaSaaS transformed our online presence! Our traffic doubled after the redesign." – *Happy Client*
+- "The attention to detail and creativity exceeded our expectations." – *Another Satisfied Client*
+
+## Ready to Elevate Your Brand?
+Book your free consultation today!
+
+## Contact
+For inquiries, please reach out at [email@example.com].  
+
+Let's create something amazing together!
