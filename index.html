@@ -1,186 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Nick Sousa - a independent designer and builder in Windsor, Connecticut. Sites for local shops, studios, and product teams. One person, start to finish, usually live in a week." />
-<meta name="theme-color" content="#0A0809" />
-<!-- Once the real URL is known, add: <link rel="canonical" href="https://your-domain/" /> -->
-<!-- This is the root URL you know, add: <link rel="canonical" href="https://your-domain/" /> -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0809'/%3E%3C/svg%3E" />
-<meta name="description" content="Nick Sousa is a web designer who creates beautiful independent websites for clients. Your clients deserve a unique presence online. I can deliver that and more." />
-<meta name="twitter:card" content="summary" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Nick Sousa: Designer & Builder" />
-<meta property="og:description" content="Build your site with the innovative styles that you have always wanted!" />
-<meta property="og:image" content="https://your-domain/img/website-image.png" />
-<meta property="og:url" content="https://your-domain/" />
-<meta property="og:site_name" content="Nick Sousa" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:image" content="https://opengraph.example.com" />
-<title>Nick Sousa Sousa SaaS</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BioRocks|Roller|Miraji" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:400,700|Lobster|Raleway" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calistoga|" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kelson" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gravitas" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=GruvBox|Felicity" type="text/css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab" type="text/css"/>
-<style>
-:root {
-  --ink: #080e0f;
-  --ash: #b4b4b4;
-  --white: #fff;
-  --black: #000;
-  --dark: #222222;
-  --greyscale: #7d7d7d;
-  --yellow: #d1bd2e;
-  --ice: #44B3E2;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nick Sousa is a web designer in Windsor, Connecticut creating beautiful, bespoke websites for local businesses and startups. Specializing in custom design, e-commerce, and mobile-responsive solutions." />
+  <meta name="theme-color" content="#0A0809" />
+  <link rel="canonical" href="https://sousasaas.com/" />
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0809'/%3E%3C/svg%3E" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nick Sousa: Designer & Builder" />
+  <meta property="og:description" content="Build your site with the innovative styles that you have always wanted!" />
+  <meta property="og:image" content="https://sousasaas.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://sousasaas.com/" />
+  <meta property="og:site_name" content="SousaSaaS" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nick Sousa - Web Designer in Windsor, Connecticut" />
+  
+  <title>SousaSaaS - Custom Web Design in Connecticut</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ink: #080e0f;
+      --ash: #b4b4b4;
+      --white: #fff;
+      --black: #000;
+      --greyscale: #7d7d7d;
+      --yellow: #d1bd2e;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-html {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  line-height: 1.6;
-}
+    html {
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      line-height: 1.6;
+    }
 
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--black);
+      color: var(--white);
+      padding: 8px 16px;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 0.3s;
+    }
 
-/* for touch commands */
-@media screen and (touch-enabled) {
-  * {
-    touch-action: manipulation;
-  }
-}
+    .skip-link:focus {
+      top: 0;
+    }
 
-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background: var(--ink);
-}
+    /* for touch commands */
+    @media screen and (touch-enabled) {
+      * {
+        touch-action: manipulation;
+      }
+    }
 
-header h1 {
-  color: var(--white);
-  font-size: 2rem;
-}
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: var(--ink);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-header nav {
-  display: flex;
-  gap: 20px;
-}
+    header h1 {
+      color: var(--white);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin: 0;
+    }
 
-header nav a {
-  color: var(--white);
-  text-decoration: none;
-}
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-header nav a:hover {
-  text-decoration: underline;
-}
+    header nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 12px;
+    }
 
-header button {
-  padding: 10px 20px;
-  border: none;
-  background: var(--yellow);
-  color: var(--black);
-  cursor: pointer;
-}
+    header nav a:hover,
+    header nav a:focus {
+      text-decoration: underline;
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
 
-header button:hover {
-  background: var(--white);
-  transition: 0.3s;
-}
+    header button {
+      padding: 10px 20px;
+      border: none;
+      background: var(--yellow);
+      color: var(--black);
+      cursor: pointer;
+      font-size: 1rem;
+    }
 
-.container {
-  margin: auto;
-  max-width: 80rem;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
+    header button:hover,
+    header button:focus {
+      background: var(--white);
+      transition: background 0.3s;
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
 
-.container article {
-  border: 1px solid var(--black);
-  background:#fff;
-  margin: 20px;
-  padding: 1rem;
-  width: 45%;
-}
+    main {
+      margin: auto;
+      max-width: 80rem;
+      padding: 20px;
+    }
 
-.container article img {
-  width: 100%;
-}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.container article h2 {
-  font-size: 1.5rem;
-  color: var(--black);
-}
+    .container section {
+      border: 1px solid var(--black);
+      background: #fff;
+      padding: 1.5rem;
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
 
-.container article p {
-  color: var(--grey);
-}
+    .container section img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
 
-/* Footer styles */
-.footer {
-  background: var(--ash);
-  color: var(--black);
-  text-align: center;
-  padding: 20px;
-}
+    .container section h2 {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: var(--black);
+      margin-bottom: 1rem;
+    }
 
-.footer a {
-  color: var(--black);
-}
+    .container section h3 {
+      font-size: 1.1rem;
+      color: var(--black);
+      margin: 1rem 0 0.5rem;
+    }
 
-.footer a:hover {
-  text-decoration: underline;
-}
-</style>
+    .container section p,
+    .container section ul {
+      color: var(--greyscale);
+      margin: 0.5rem 0;
+    }
 
+    .container section ul {
+      padding-left: 1.2rem;
+    }
+
+    .container section li {
+      margin: 0.5rem 0;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--black);
+      margin: 0.5rem 0;
+    }
+
+    /* Footer styles */
+    .footer {
+      background: var(--ash);
+      color: var(--black);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: var(--black);
+    }
+
+    .footer a:hover,
+    .footer a:focus {
+      text-decoration: underline;
+      outline: 2px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .footer-nav a {
+      padding: 8px 12px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      header nav {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .container section {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <header>
-    <h1>Nick Sousa</h1>
-    <nav>
+    <h1>SousaSaaS</h1>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button aria-label="Book free consultation">Book Free Consultation</button>
   </header>
   
-  <article>
-      <h2>Welcome to SousaSaaS!</h2>
-      <p>We specialize in creating bespoke websites that elevate your brand and connect with your audience. Whether you're a startup or an established business, we're here to help you thrive online.</p>
-  </article>
+  <main id="main-content">
+    <div class="container">
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Welcome to SousaSaaS!</h2>
+        <p>We specialize in creating bespoke websites that elevate your brand and connect with your audience. Whether you're a startup or an established business, we're here to help you thrive online.</p>
+        <p>Based in Windsor, Connecticut, I work with local businesses, startups, and those looking to refresh their online presence. Your success is my passion, and I strive to achieve it through collaboration and innovative design.</p>
+      </section>
+      
+      <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Our Services</h2>
+        <p>Professional web design services tailored to your business needs:</p>
+        <ul>
+          <li><strong>Custom Website Design</strong> - Unique, brand-focused designs</li>
+          <li><strong>E-commerce Solutions</strong> - Full online store setup</li>
+          <li><strong>Mobile Responsive Design</strong> - Looks great on any device</li>
+          <li><strong>Web Maintenance & Support</strong> - Keep your site running smoothly</li>
+          <li><strong>SEO Optimization</strong> - Get found by your customers</li>
+        </ul>
+      </section>
+      
+      <section id="pricing" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading">Transparent Pricing</h2>
+        
+        <h3>Website Packages</h3>
+        <p><strong>Local Business Site:</strong> <span class="price">$2,000</span></p>
+        <p>Perfect for small businesses needing a professional online presence with 3-5 pages.</p>
+        
+        <p><strong>Site & System:</strong> <span class="price">$6,000</span></p>
+        <p>For businesses needing advanced functionality, custom integrations, and 5-10 pages.</p>
+        
+        <p><strong>Product Site:</strong> <span class="price">$16,000</span></p>
+        <p>Complete eCommerce solution with product catalog, payment processing, and full features.</p>
+        
+        <h3>Ongoing Services</h3>
+        <p><strong>Care Plan (Monthly):</strong> <span class="price">$60/month</span></p>
+        <p>Regular updates, backups, and minor content changes.</p>
+        
+        <p><strong>Care Plan (Annual):</strong> <span class="price">$720/year</span></p>
+        <p>Same as monthly, billed annually with a discount.</p>
+        
+        <p><strong>Active Product Retainer:</strong> <span class="price">$1,200/month</span></p>
+        <p>Ongoing development and support for active eCommerce sites.</p>
+        
+        <p><strong>Token Gating Add-on:</strong> <span class="price">$2,800-$4,800</span></p>
+        <p>Web3 integration for exclusive access content.</p>
+      </section>
+      
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Ready to Get Started?</h2>
+        <p>Book your free consultation today! Let's discuss how we can create a website that helps your business grow.</p>
+        <p><strong>Email:</strong> <a href="mailto:contact@sousasaas.com">contact@sousasaas.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+18601234567">(860) 123-4567</a></p>
+        <p><strong>Location:</strong> Windsor, Connecticut</p>
+      </section>
+    </div>
+  </main>
   
-  <article>
-    <h2>Our Services</h2>
-    <p>- Custom Website Design</p>
-    <p>- E-commerce Solutions</p>
-    <p>- Mobile Responsive Design</p>
-    <p>Local Business Price: $2,000</p>
-    <p>Site & System Price: $6,000</p>
-    <p>Product Price: $16,000</p>
-    <p>Care Plan Monthly: $60/month</p>
-    <p>Care Plan Annual: $720 a year</p>
-    <p>Active Product Retainer Price: $1,200/month</p>
-    <p>Token Gating Add-on Range: $2,800–4,800</p>
-  </article>
-</div>
-<footer class="footer">
-  <p>&copy; 2026 Nick Sousa. All Rights Reserved.</p>
-  <a href="https://www.privacypolicy.com">Privacy Policy</a>
-</footer>
-<script>
-  // JavaScript to handle any interactions
-</script>
+  <footer class="footer">
+    <p>&copy; <span id="current-year">2024</span> SousaSaaS. All Rights Reserved.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="https://sousasaas.com/privacy" rel="noopener noreferrer">Privacy Policy</a>
+    </nav>
+  </footer>
+  
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

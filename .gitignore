@@ -1,3 +1,77 @@
-.vercel
-node_modules
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+.Trashes
+.DS_Store?
+._*
+.Spotlight-V100
+.ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env*.local
+.env.development
+.env.test
+.env.production
+.env.test.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Cache
+.cache
+.parcel-cache
+.grunt
+.bower-cache
+
+# Testing
+coverage/
+.nyc_output/
+lib-cov/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.tern-port
+.fusebox/
+.dynamodb/
+.serverless/
+
+# Vercel
+.vercel
+
+# Privacy
+*.key
+*.pem
+*.crt
+*.pfx
