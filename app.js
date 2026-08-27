@@ -39,7 +39,7 @@
       .filter(Boolean)
       .join("\n");
 
-    const mailtoUrl = `mailto:contact@sousasaas.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:voidcalleroc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     status.textContent =
       "Your email application is opening with your project details. Review it, then send when you are ready.";
     window.location.href = mailtoUrl;
