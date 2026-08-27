@@ -41,11 +41,11 @@ Open `http://localhost:8000` in a browser while the local server is running. The
 | `npm run lint:html`    | Detects invalid or inconsistent HTML.                             |
 | `npm run test:links`   | Detects broken local routes and static assets referenced by HTML. |
 
-GitHub Actions runs these checks on pull requests and pushes to `main`. Enable branch protection in GitHub so changes to `main` require a passing workflow and review before merging.
+GitHub Actions runs these checks on pull requests and pushes to `main`. Branch protection is active: changes to `main` require a pull request and the passing `Validate site` check before merging.
 
 ## Content and contact updates
 
-The website intentionally does not submit contact-form data to an application endpoint. It prepares a visitor-controlled email to `contact@sousasaas.com`. Before publishing a custom domain, verify that this mailbox can receive messages. Replace service descriptions, engagement ranges, and contact details only with information that has been approved for public use.
+The website intentionally does not submit contact-form data to an application endpoint. It prepares a visitor-controlled email to `voidcalleroc@gmail.com`. Before publishing a custom domain, verify that this mailbox can receive messages. Replace service descriptions, engagement ranges, and contact details only with information that has been approved for public use.
 
 ## Deployment checklist
 
