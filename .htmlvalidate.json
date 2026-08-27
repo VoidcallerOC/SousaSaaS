@@ -1,0 +1,10 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-implicit-button-type": "error",
+    "no-raw-characters": "error",
+    "no-trailing-whitespace": "error",
+    "doctype-style": ["error", { "style": "lowercase" }],
+    "void-style": ["error", { "style": "selfclosing" }]
+  }
+}

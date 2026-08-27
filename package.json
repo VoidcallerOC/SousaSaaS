@@ -1,0 +1,17 @@
+{
+  "name": "sousasaas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SousaSaaS marketing website",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:html": "html-validate .",
+    "test:links": "node scripts/check-local-links.mjs",
+    "test": "npm run format:check && npm run lint:html && npm run test:links"
+  },
+  "devDependencies": {
+    "html-validate": "10.7.0",
+    "prettier": "3.6.2"
+  }
+}
