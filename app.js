@@ -13,35 +13,55 @@
     return;
   }
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) {
       status.textContent =
-        "Please complete the required fields before preparing your email.";
+        "Please complete the required fields before sending.";
       return;
     }
 
     const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const company = String(formData.get("company") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-    const subject = `Project inquiry from ${name}`;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : "",
-      "",
-      "Project details:",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      company: String(formData.get("company") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+      website: String(formData.get("website") || "").trim(),
+    };
 
-    const mailtoUrl = `mailto:voidcalleroc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    status.textContent =
-      "Your email application is opening with your project details. Review it, then send when you are ready.";
-    window.location.href = mailtoUrl;
+    const submitButton = form.querySelector("button[type='submit']");
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+    status.textContent = "Sending your inquiry…";
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.ok) {
+        status.textContent =
+          result.error ||
+          "The message could not be sent. Email voidcalleroc@gmail.com instead.";
+        return;
+      }
+
+      form.reset();
+      status.textContent =
+        "Received. I will reply from the studio inbox as soon as I can.";
+    } catch {
+      status.textContent =
+        "The message could not be sent. Email voidcalleroc@gmail.com instead.";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 })();

@@ -6,18 +6,19 @@ The live project is currently served at [sousasaas.vercel.app](https://sousasaas
 
 ## What is included
 
-The site is a dependency-light static implementation. It provides a responsive marketing page, a client-side inquiry form that opens a pre-filled email in the visitor’s own mail application, a privacy notice, social-preview metadata, a sitemap, and crawler controls.
+The site is a dependency-light static implementation plus a small Vercel function for inquiries. It provides a responsive marketing page, a server-side inquiry form, a privacy notice, social-preview metadata, a sitemap, and crawler controls.
 
-| Area                         | Location                                                              |
-| ---------------------------- | --------------------------------------------------------------------- |
-| Main page                    | `index.html`                                                          |
-| Shared styles                | `styles.css`                                                          |
-| Client-side inquiry behavior | `app.js`                                                              |
-| Privacy notice               | `privacy/index.html`                                                  |
-| Social-preview image         | `images/og-image.jpg`                                                 |
-| Security and cache headers   | `vercel.json`                                                         |
-| Quality checks               | `package.json`, `.htmlvalidate.json`, `scripts/check-local-links.mjs` |
-| Continuous integration       | `.github/workflows/quality.yml`                                       |
+| Area                       | Location                                                              |
+| -------------------------- | --------------------------------------------------------------------- |
+| Main page                  | `index.html`                                                          |
+| Shared styles              | `styles.css`                                                          |
+| Inquiry form behavior      | `app.js`                                                              |
+| Inquiry delivery           | `api/contact.js`                                                      |
+| Privacy notice             | `privacy/index.html`                                                  |
+| Social-preview image       | `images/og-image.jpg`                                                 |
+| Security and cache headers | `vercel.json`                                                         |
+| Quality checks             | `package.json`, `.htmlvalidate.json`, `scripts/check-local-links.mjs` |
+| Continuous integration     | `.github/workflows/quality.yml`                                       |
 
 ## Local development
 
@@ -45,20 +46,26 @@ GitHub Actions runs these checks on pull requests and pushes to `main`. Branch p
 
 ## Content and contact updates
 
-The website intentionally does not submit contact-form data to an application endpoint. It prepares a visitor-controlled email to `voidcalleroc@gmail.com`. Before publishing a custom domain, verify that this mailbox can receive messages. Replace service descriptions, engagement ranges, and contact details only with information that has been approved for public use.
+The inquiry form posts to `/api/contact`. Delivery uses Resend. Set these Vercel project environment variables before relying on the form in production:
+
+- `RESEND_API_KEY` — Resend API key
+- `CONTACT_TO_EMAIL` — destination inbox (currently the verified public address `voidcalleroc@gmail.com`)
+- `CONTACT_FROM_EMAIL` — optional verified From value (example: `SousaSaaS <hello@your-domain.com>`). Until a custom domain is verified in Resend, the Resend onboarding sender is used.
+
+The visible mailto link remains a fallback. Do not point `CONTACT_TO_EMAIL` at a `sousasaas.com` address until that mailbox exists.
 
 ## Deployment checklist
 
 1. Create a branch and make the required content or code changes.
 2. Run `npm test` locally.
-3. Review the Vercel preview at desktop and mobile widths. Confirm that the site is styled, the inquiry form opens a drafted email, `/privacy`, `/robots.txt`, `/sitemap.xml`, `/favicon.svg`, and `/images/og-image.jpg` return 200, and the page has the expected metadata.
+3. Review the Vercel preview at desktop and mobile widths. Confirm that the site is styled, the inquiry form posts to `/api/contact`, `/privacy`, `/robots.txt`, `/sitemap.xml`, `/favicon.svg`, and `/images/og-image.jpg` return 200, and the page has the expected metadata.
 4. Merge the approved change to `main` and wait for the Git-linked Vercel deployment to be READY.
 5. Confirm the production alias serves the newly approved commit—not an earlier redeploy. Check the title, canonical URL, response status, security policy, form behavior, and the core routes again on production.
 6. If a custom domain is later configured, update the canonical tag, Open Graph URLs, sitemap, `robots.txt`, contact email address, and this README in the same pull request. Verify HTTPS, both apex and `www` redirect behavior, and mail delivery before requesting indexing.
 
 ## Privacy notice
 
-`privacy/index.html` is a working website privacy notice based on the current static implementation, which includes Vercel delivery, Google Fonts, and a mail-client inquiry form. It is not legal advice. Have qualified counsel review it before relying on it, especially if the site adds analytics, advertising pixels, form processing, account features, e-commerce, or visitors in additional jurisdictions.
+`privacy/index.html` is a working website privacy notice based on the current implementation, which includes Vercel delivery, Google Fonts, and a server-side inquiry form. It is not legal advice. Have qualified counsel review it before relying on it, especially if the site adds analytics, advertising pixels, form processing, account features, e-commerce, or visitors in additional jurisdictions.
 
 ## Security model
 
