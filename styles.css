@@ -355,6 +355,49 @@ h2 em {
   color: #3f4b4b;
 }
 
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(2.8rem, 5vw, 5.3rem);
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  padding: 1.5rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+
+.work-meta {
+  margin: 0 0 auto;
+  color: var(--clay);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.work-card h3 {
+  margin: 2.25rem 0 0.85rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.work-card p {
+  margin: 0 0 1.6rem;
+  color: #3f4b4b;
+}
+
+.work-card .text-link {
+  margin-top: auto;
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
@@ -621,10 +664,12 @@ h2 em {
     max-width: 34rem;
   }
   .service-grid,
+  .work-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
-  .service-card {
+  .service-card,
+  .work-card {
     min-height: 15rem;
   }
   .price-card {
