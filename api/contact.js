@@ -48,7 +48,7 @@ export default async function handler(request, response) {
   if (message.length < 10 || message.length > 4000) {
     return response.status(400).json({
       ok: false,
-      error: "Please add a short note about the project.",
+      error: "Please add a short note about the shop.",
     });
   }
 
@@ -63,14 +63,14 @@ export default async function handler(request, response) {
 
   const to = process.env.CONTACT_TO_EMAIL || "voidcalleroc@gmail.com";
   const from =
-    process.env.CONTACT_FROM_EMAIL || "SousaSaaS <onboarding@resend.dev>";
+    process.env.CONTACT_FROM_EMAIL || "Front Window <onboarding@resend.dev>";
 
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
     company ? `Company: ${company}` : "",
     "",
-    "Project details:",
+    "Shop details:",
     message,
   ]
     .filter(Boolean)
@@ -86,7 +86,7 @@ export default async function handler(request, response) {
       from,
       to: [to],
       reply_to: email,
-      subject: `Project inquiry from ${name}`,
+      subject: `Shop inquiry from ${name}`,
       text,
     }),
   });

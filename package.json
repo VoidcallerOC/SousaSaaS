@@ -2,7 +2,7 @@
   "name": "sousasaas",
   "version": "1.0.0",
   "private": true,
-  "description": "SousaSaaS marketing website",
+  "description": "Front Window marketing website",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
