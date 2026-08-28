@@ -8,17 +8,17 @@ The live project is currently served at [sousasaas.vercel.app](https://sousasaas
 
 The site is a dependency-light static implementation plus a small Vercel function for inquiries. It provides a responsive marketing page, a server-side inquiry form, a privacy notice, social-preview metadata, a sitemap, and crawler controls.
 
-| Area                         | Location                                                              |
-| ---------------------------- | --------------------------------------------------------------------- |
-| Main page                    | `index.html`                                                          |
-| Shared styles                | `styles.css`                                                          |
-| Inquiry form behavior        | `app.js`                                                              |
-| Inquiry delivery             | `api/contact.js`                                                      |
-| Privacy notice               | `privacy/index.html`                                                  |
-| Social-preview image         | `images/og-image.jpg`                                                 |
-| Security and cache headers   | `vercel.json`                                                         |
-| Quality checks               | `package.json`, `.htmlvalidate.json`, `scripts/check-local-links.mjs` |
-| Continuous integration       | `.github/workflows/quality.yml`                                       |
+| Area                       | Location                                                              |
+| -------------------------- | --------------------------------------------------------------------- |
+| Main page                  | `index.html`                                                          |
+| Shared styles              | `styles.css`                                                          |
+| Inquiry form behavior      | `app.js`                                                              |
+| Inquiry delivery           | `api/contact.js`                                                      |
+| Privacy notice             | `privacy/index.html`                                                  |
+| Social-preview image       | `images/og-image.jpg`                                                 |
+| Security and cache headers | `vercel.json`                                                         |
+| Quality checks             | `package.json`, `.htmlvalidate.json`, `scripts/check-local-links.mjs` |
+| Continuous integration     | `.github/workflows/quality.yml`                                       |
 
 ## Local development
 
