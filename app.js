@@ -6,8 +6,6 @@
     element.textContent = currentYear;
   });
 
-
-
   const packages = {
     local: {
       name: "Local Business Site",
