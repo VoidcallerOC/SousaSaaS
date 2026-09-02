@@ -779,7 +779,6 @@ h2 em {
   text-underline-offset: 0.22em;
 }
 
-
 .pitch-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
