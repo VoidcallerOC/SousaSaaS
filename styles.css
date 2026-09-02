@@ -239,12 +239,52 @@ h2 {
 }
 
 h1 {
-  max-width: 16ch;
-  margin-bottom: 1.5rem;
+  max-width: 18ch;
+  margin-bottom: 1.75rem;
   font-family: var(--serif);
-  font-size: clamp(3.2rem, 7.7vw, 7.3rem);
+  font-size: clamp(3.4rem, 8.6vw, 8rem);
   font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
 }
+
+.hero-line { display: block; }
+.hero-line em { font-style: italic; color: var(--brick); }
+.hero-line--mark {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.35em;
+}
+.hero-line--mark::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0.35em; bottom: 0.08em;
+  height: 0.14em;
+  background: var(--brick);
+  opacity: 0.18;
+  z-index: -1;
+}
+.eyebrow--rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow--rule::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  background: var(--brick);
+}
+.hero-card-foot {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+.hero-card-foot strong { color: var(--ink); }
 
 h2,
 h3 {
