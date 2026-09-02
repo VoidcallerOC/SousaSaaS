@@ -7,9 +7,23 @@
 
 .pitch-picker,
 .visit-path {
+  position: relative;
   padding: 1.5rem;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 2px solid var(--wood);
+  box-shadow: 0.35rem 0.35rem 0 var(--wood);
+}
+
+.pitch-picker::after,
+.visit-path::after {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--brick);
+  border-radius: 0.1rem;
+  content: "";
 }
 
 .package-tabs {
@@ -24,7 +38,7 @@
   padding: 0.55rem 0.85rem;
   color: var(--ink);
   background: var(--cream);
-  border: 1px solid var(--line);
+  border: 1px solid var(--wood);
   border-radius: 0.15rem;
   font-size: 0.82rem;
   font-weight: 700;
@@ -33,13 +47,13 @@
 .package-tab.is-active,
 .package-tab:hover {
   color: var(--paper);
-  background: var(--ink);
-  border-color: var(--ink);
+  background: var(--brick);
+  border-color: var(--brick);
 }
 
 .package-panel .price {
   margin: 0 0 0.55rem;
-  color: var(--clay);
+  color: var(--brick);
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -53,7 +67,7 @@
 
 .package-panel p {
   margin: 0;
-  color: #3f4b4b;
+  color: var(--muted);
 }
 
 .package-panel ul {
@@ -76,7 +90,7 @@
 
 .visit-lead {
   margin: 0 0 1.1rem;
-  color: #3f4b4b;
+  color: var(--muted);
 }
 
 .visit-steps {
@@ -103,14 +117,14 @@
 
 .visit-steps .is-active button,
 .visit-steps button:hover {
-  color: var(--clay);
+  color: var(--brick);
 }
 
 .visit-num {
-  color: var(--clay);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  font-weight: 500;
+  color: var(--brick);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .visit-steps strong {
@@ -121,7 +135,7 @@
 .visit-steps em {
   display: block;
   margin-top: 0.2rem;
-  color: #3f4b4b;
+  color: var(--muted);
   font-style: normal;
   font-size: 0.88rem;
 }
@@ -129,17 +143,19 @@
 .visit-phone {
   margin-top: 1.2rem;
   padding: 1.15rem 1.2rem;
-  background: var(--gold);
-  border: 1px solid var(--ink);
-  box-shadow: 0.35rem 0.35rem 0 var(--ink);
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--brick);
+  box-shadow: 0.3rem 0.3rem 0 var(--brick);
 }
 
 .visit-phone-label {
   margin: 0 0 0.45rem;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  color: var(--brick);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -152,7 +168,7 @@
 
 .visit-phone-proof {
   margin: 0.9rem 0 0;
-  color: #263030;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 600;
 }
