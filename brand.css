@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 :root {
   --paper: #070708;
   --cream: #0c0d10;
@@ -12,4 +14,20 @@
   --muted: #6a6e76;
   --light-line: rgba(196, 198, 203, 0.1);
   --clay: var(--brick);
+  --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Space Grotesk", "DM Sans", sans-serif;
+}
+
+h1,
+.brand,
+.hero-stats dd {
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+h1 em,
+h2 em {
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 600;
 }
