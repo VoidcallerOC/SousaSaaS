@@ -45,7 +45,7 @@
       ]
     },
     {
-      "source": "/(styles.css|pitch.css|app.js|favicon.svg)",
+      "source": "/(styles.css|brand.css|pitch.css|app.js|favicon.svg)",
       "headers": [
         {
           "key": "Cache-Control",

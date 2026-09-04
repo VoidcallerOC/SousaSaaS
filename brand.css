@@ -1,0 +1,15 @@
+:root {
+  --paper: #070708;
+  --cream: #0c0d10;
+  --surface-2: #121318;
+  --ink: #c4c6cb;
+  --brick: #8a8e96;
+  --brick-deep: #d0d2d6;
+  --accent-hi: #e6e7ea;
+  --wood: #2a2b31;
+  --line: #1a1b20;
+  --line-strong: #3a3c44;
+  --muted: #6a6e76;
+  --light-line: rgba(196, 198, 203, 0.1);
+  --clay: var(--brick);
+}
