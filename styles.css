@@ -1272,35 +1272,31 @@ h1 em {
   padding-top: 0.6rem;
 }
 
+/* One consistent thumb canvas — same for every card, dark or paper */
 .work-thumb {
   position: relative;
   margin: 0;
-  padding: clamp(1.2rem, 3vw, 2rem) clamp(1rem, 3vw, 1.8rem);
+  padding: clamp(1.6rem, 4vw, 2.4rem) clamp(1rem, 3vw, 1.6rem);
   overflow: hidden;
-  min-height: 360px;
+  min-height: 380px;
   background:
     radial-gradient(
-      circle at 20% 12%,
-      rgba(196, 165, 116, 0.4),
+      circle at 20% 15%,
+      rgba(196, 165, 116, 0.35),
       transparent 55%
     ),
     linear-gradient(160deg, var(--paper), var(--cream) 55%, #e6d7bc);
   border: 0;
   border-bottom: 1px solid var(--wood);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   isolation: isolate;
+  text-align: center;
 }
-.work-thumb::before,
-.work-thumb::after {
+.work-thumb::before {
   position: absolute;
+  inset: 0;
   content: "";
   pointer-events: none;
   z-index: 0;
-}
-.work-thumb::before {
-  inset: 0;
   background:
     repeating-linear-gradient(
       0deg,
@@ -1314,101 +1310,60 @@ h1 em {
     );
   opacity: 0.55;
 }
-.work-thumb::after {
-  bottom: -0.6rem;
-  left: 8%;
-  right: 8%;
-  height: 1.2rem;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(42, 28, 20, 0.28),
-    rgba(42, 28, 20, 0) 65%
-  );
-  filter: blur(6px);
-}
-.work-thumb--dark {
-  background:
-    radial-gradient(
-      circle at 20% 12%,
-      rgba(181, 74, 46, 0.35),
-      transparent 55%
-    ),
-    linear-gradient(160deg, #1a0f0a, #0a0705 70%);
-}
-.work-thumb--dark::before {
-  opacity: 0.35;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(196, 165, 116, 0.08) 0 1px,
-      transparent 1px 22px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(196, 165, 116, 0.08) 0 1px,
-      transparent 1px 22px
-    );
-}
 
-/* Phone frame around the mobile screenshot */
+/* Phone-frame lives in an inline-block wrapper so `text-align: center`
+   on the thumb centers it deterministically — no flex quirks. */
 .phone-frame {
   position: relative;
   z-index: 1;
-  width: min(72%, 260px);
-  aspect-ratio: 9 / 17.85;
+  display: inline-block;
+  width: 220px;
+  max-width: 78%;
+  aspect-ratio: 9 / 18;
+  margin: 0 auto;
+  padding: 7px 5px;
   background: #0a0705;
-  border-radius: 24px;
-  padding: 8px 6px;
+  border-radius: 26px;
   box-shadow:
-    0 1.5rem 3rem rgba(42, 28, 20, 0.22),
-    0 0 0 1px rgba(196, 165, 116, 0.35),
-    inset 0 0 0 1px rgba(246, 239, 228, 0.05);
+    0 1.4rem 2.8rem rgba(42, 28, 20, 0.22),
+    0 0 0 1px rgba(196, 165, 116, 0.45),
+    inset 0 0 0 1px rgba(246, 239, 228, 0.04);
   overflow: hidden;
+  vertical-align: top;
   transform: translateZ(0);
   transition:
     transform 380ms var(--ease),
     box-shadow 380ms var(--ease);
 }
-.phone-frame::before {
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36%;
-  height: 14px;
-  background: #0a0705;
-  border-radius: 0 0 10px 10px;
-  content: "";
-  z-index: 2;
-}
-.phone-frame img,
-.work-thumb img {
+.phone-frame img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 16px;
+  border-radius: 20px;
   transition: object-position 6000ms linear;
-  will-change: object-position, transform;
+  will-change: object-position;
 }
 .work-card:hover .phone-frame,
 .work-card:focus-within .phone-frame {
   transform: translateY(-4px) rotate(-1.2deg);
   box-shadow:
-    0 2rem 3.6rem rgba(42, 28, 20, 0.3),
-    0 0 0 1px rgba(181, 74, 46, 0.55);
+    0 1.8rem 3.4rem rgba(42, 28, 20, 0.3),
+    0 0 0 1px rgba(181, 74, 46, 0.6);
 }
 .work-card:hover .phone-frame img,
 .work-card:focus-within .phone-frame img {
   object-position: center bottom;
 }
 
+/* Featured phone is a touch larger, same background */
 .work-card--feature .phone-frame {
-  width: min(70%, 240px);
+  width: 240px;
+  max-width: 72%;
 }
 .work-card--dark .work-thumb {
-  border-bottom-color: #2a1c14;
+  border-bottom-color: var(--wood);
 }
 .work-status {
   position: absolute;
@@ -1497,41 +1452,7 @@ h1 em {
   text-decoration-color: var(--brick);
   transform: translateX(4px);
 }
-.work-card--dark {
-  background: #0a0705;
-  border-color: #2a1c14;
-}
-.work-card--dark .work-thumb {
-  border-bottom-color: #2a1c14;
-}
-.work-card--dark .work-body h3,
-.work-card--dark .work-body {
-  color: var(--paper);
-}
-.work-card--dark .work-body > p:not(.work-meta) {
-  color: rgba(246, 239, 228, 0.72);
-}
-.work-card--dark .work-body .work-meta {
-  color: var(--wood);
-}
-.work-card--dark .work-tags li {
-  color: var(--paper);
-  background: rgba(246, 239, 228, 0.08);
-  border-color: rgba(246, 239, 228, 0.25);
-}
-.work-card--dark .work-cta {
-  color: var(--paper);
-  text-decoration-color: rgba(246, 239, 228, 0.35);
-}
-.work-card--dark:hover .work-cta {
-  color: var(--wood);
-  text-decoration-color: var(--brick);
-}
-.work-card--dark .work-status {
-  color: var(--paper);
-  background: rgba(10, 7, 5, 0.72);
-  border-color: rgba(196, 165, 116, 0.4);
-}
+/* Every card shares the same cream/paper container — no dark variant. */
 
 /* Magnetic buttons keep their existing look; JS moves them slightly on hover. */
 [data-magnetic] {
