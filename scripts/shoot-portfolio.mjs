@@ -51,7 +51,10 @@ async function main() {
           timeout: 45000,
         });
       } catch (err) {
-        console.warn("  networkidle timed out, falling back to load:", err.message);
+        console.warn(
+          "  networkidle timed out, falling back to load:",
+          err.message,
+        );
         await page.goto(shot.url, { waitUntil: "load", timeout: 45000 });
       }
       // Give any late-loaded fonts / hero images a beat
