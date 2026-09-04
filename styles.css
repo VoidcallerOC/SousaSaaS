@@ -1275,10 +1275,15 @@ h1 em {
 /* One consistent thumb canvas — same for every card, dark or paper */
 .work-thumb {
   position: relative;
+  width: 100%;
   margin: 0;
   padding: clamp(1.6rem, 4vw, 2.4rem) clamp(1rem, 3vw, 1.6rem);
   overflow: hidden;
   min-height: 380px;
+  /* Explicit reset: the base .work-thumb block earlier in this file
+     defines aspect-ratio: 4/3, which combines with min-height to
+     force a width wider than the card and pushes the phone off-screen. */
+  aspect-ratio: auto;
   background:
     radial-gradient(
       circle at 20% 15%,
@@ -1290,6 +1295,7 @@ h1 em {
   border-bottom: 1px solid var(--wood);
   isolation: isolate;
   text-align: center;
+  box-sizing: border-box;
 }
 .work-thumb::before {
   position: absolute;
