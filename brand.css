@@ -31,3 +31,53 @@ h2 em {
   font-style: normal;
   font-weight: 600;
 }
+
+/* Even shop windows. No leftover column. */
+.work-grid--rich {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1080px;
+}
+
+.work-grid--rich > .work-card,
+.work-grid--rich > .work-card--feature {
+  grid-column: auto;
+}
+
+.work-card--feature {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.work-thumb,
+.work-card--feature .work-thumb {
+  aspect-ratio: 4 / 5;
+  min-height: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--wood);
+}
+
+.work-thumb img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.work-card--feature .work-body {
+  padding: 1.2rem 1.3rem 1.35rem;
+}
+
+.work-card--feature .work-body h3 {
+  font-size: 1.4rem;
+}
+
+.work-body {
+  padding: 1.15rem 1.25rem 1.3rem;
+}
+
+@media (max-width: 720px) {
+  .work-grid--rich {
+    grid-template-columns: 1fr;
+  }
+}
