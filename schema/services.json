@@ -5,37 +5,17 @@
       "@type": "ProfessionalService",
       "@id": "https://sousasaas.vercel.app/#business",
       "name": "FORGE CT",
-      "legalName": "FORGE CT",
       "url": "https://sousasaas.vercel.app/",
       "email": "voidcalleroc@gmail.com",
-      "image": "https://sousasaas.vercel.app/images/og-image.jpg",
-      "description": "Shop pages and interactive sites for card and tabletop stores around Greater Hartford. Built in Farmington, Connecticut.",
-      "priceRange": "$2,000+",
-      "currenciesAccepted": "USD",
-      "paymentAccepted": "Invoice",
-      "founder": {
-        "@type": "Person",
-        "name": "Nick Sousa"
-      },
+      "description": "Shop pages for card and tabletop stores around Greater Hartford. Care from $35 a month.",
+      "priceRange": "$35+",
+      "founder": { "@type": "Person", "name": "Nick Sousa" },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Farmington",
         "addressRegion": "CT",
         "addressCountry": "US"
       },
-      "areaServed": [
-        { "@type": "City", "name": "Farmington" },
-        { "@type": "City", "name": "Hartford" },
-        { "@type": "City", "name": "West Hartford" },
-        { "@type": "City", "name": "Southington" },
-        { "@type": "AdministrativeArea", "name": "Hartford County" }
-      ],
-      "knowsAbout": [
-        "Shop websites",
-        "Card shop websites",
-        "Tabletop store websites",
-        "Local business websites"
-      ],
       "hasOfferCatalog": { "@id": "https://sousasaas.vercel.app/services#catalog" }
     },
     {
@@ -46,65 +26,18 @@
         {
           "@type": "Offer",
           "name": "Local Business Site",
-          "url": "https://sousasaas.vercel.app/#pricing",
           "price": "2000",
           "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "2000",
-            "priceCurrency": "USD",
-            "valueAddedTaxIncluded": false
-          },
-          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Service",
             "name": "Local Business Site",
-            "serviceType": "Website design and build",
-            "description": "Shop page. Three to five pages: hours, the floor, how to walk in."
+            "description": "Shop page. Hours, the floor, how to walk in."
           }
         },
         {
           "@type": "Offer",
-          "name": "Site and System",
-          "url": "https://sousasaas.vercel.app/#pricing",
-          "price": "6000",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "6000",
-            "priceCurrency": "USD"
-          },
-          "availability": "https://schema.org/InStock",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Site and System",
-            "serviceType": "Custom website and shop systems",
-            "description": "Events, play nights, collection intake, or a bigger site around the shop."
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Product Site",
-          "url": "https://sousasaas.vercel.app/#pricing",
-          "price": "16000",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "16000",
-            "priceCurrency": "USD"
-          },
-          "availability": "https://schema.org/InStock",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Product Site",
-            "serviceType": "Catalog and checkout website",
-            "description": "A catalog or checkout that matches how the shop actually sells."
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Ongoing care",
-          "url": "https://sousasaas.vercel.app/#pricing",
+          "name": "Care",
+          "url": "https://sousasaas.vercel.app/care",
           "price": "35",
           "priceCurrency": "USD",
           "priceSpecification": {
@@ -113,12 +46,30 @@
             "priceCurrency": "USD",
             "unitText": "MONTH"
           },
-          "availability": "https://schema.org/InStock",
           "itemOffered": {
             "@type": "Service",
-            "name": "Ongoing care",
+            "name": "Care",
             "serviceType": "Website care plan",
             "description": "Hours, events, and restocks stay current. Cancel anytime."
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Care+",
+          "url": "https://sousasaas.vercel.app/care",
+          "price": "79",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "79",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Care+",
+            "serviceType": "Website care plan",
+            "description": "Care plus one extra monthly change and same-week turnaround."
           }
         }
       ]
