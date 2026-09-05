@@ -37,13 +37,13 @@ body {
 .brand.brand--footer {
   display: block !important;
   overflow: hidden;
-  width: 168px !important;
-  height: 32px !important;
+  width: 196px !important;
+  height: 38px !important;
   padding: 0 !important;
   font-size: 0 !important;
   line-height: 0 !important;
   color: transparent !important;
-  background: url("/brand/wordmark.svg") left center / contain no-repeat !important;
+  background: url("/brand/wordmark.svg?v=20260905a") left center / contain no-repeat !important;
 }
 
 .brand span,
