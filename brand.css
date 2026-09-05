@@ -35,38 +35,21 @@ body {
 
 .brand,
 .brand.brand--footer {
-  display: inline-flex !important;
-  align-items: baseline !important;
-  gap: 0 !important;
-  width: auto !important;
-  height: auto !important;
-  min-width: 0 !important;
+  display: block !important;
+  overflow: hidden;
+  width: 220px !important;
+  height: 32px !important;
   padding: 0 !important;
-  overflow: visible !important;
-  background: none !important;
-  background-image: none !important;
-  color: #f2f2f2 !important;
-  font-family: "Space Grotesk", var(--sans) !important;
-  font-size: 1.45rem !important;
-  font-weight: 600 !important;
-  line-height: 1 !important;
-  letter-spacing: 0.02em !important;
-  text-decoration: none !important;
-  text-transform: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+  background: url("/brand/DTsjw.png") left center / contain no-repeat !important;
 }
 
 .brand span,
-.brand.brand--footer span {
-  display: inline !important;
-  color: #8a9099 !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.02em !important;
-}
-
 .brand span::before {
-  content: "-" !important;
-  display: inline !important;
-  color: #8a9099 !important;
+  display: none !important;
+  content: none !important;
 }
 
 h1,
