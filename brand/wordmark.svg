@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="FORGE-CT">
+  <g transform="translate(0,8) scale(0.78)">
+    <path fill="#E6E6E6" d="M36 26 L104 26 L88 48 L20 48 Z"/>
+    <path fill="#E6E6E6" d="M20 60 H84 L66 86 H42 V126 H20 Z"/>
+  </g>
+  <text x="108" y="86" fill="#E6E6E6" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-2">ORGE</text>
+  <text x="348" y="86" fill="#8A9099" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-1">-CT</text>
+</svg>
