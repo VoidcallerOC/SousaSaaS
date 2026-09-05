@@ -1,28 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --paper: #070708;
-  --cream: #0c0d10;
-  --surface-2: #121318;
-  --ink: #c4c6cb;
-  --brick: #8a8e96;
-  --brick-deep: #d0d2d6;
-  --accent-hi: #e6e7ea;
-  --wood: #2a2b31;
-  --line: #1a1b20;
-  --line-strong: #3a3c44;
-  --muted: #6a6e76;
-  --light-line: rgba(196, 198, 203, 0.1);
-  --clay: var(--brick);
+  --fog: #e6e6e6;
+  --slate: #8a9099;
+  --charcoal: #1a1c1f;
+  --void: #0a0a0a;
+  --paper: var(--void);
+  --cream: var(--charcoal);
+  --surface-2: #121418;
+  --ink: var(--fog);
+  --brick: var(--slate);
+  --brick-deep: #c8ccd1;
+  --accent-hi: var(--fog);
+  --wood: #2a2d32;
+  --line: #1a1c1f;
+  --line-strong: #3a3d44;
+  --muted: var(--slate);
+  --light-line: rgba(230, 230, 230, 0.1);
+  --clay: var(--slate);
   --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
   --serif: "Space Grotesk", "DM Sans", sans-serif;
 }
 
+html,
+body {
+  background: var(--void);
+  color: var(--fog);
+}
+
+.site-header {
+  background: rgba(10, 10, 10, 0.92);
+  border-bottom: 1px solid rgba(138, 144, 153, 0.18);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.12em;
+  color: var(--fog);
+  font-family: "Space Grotesk", var(--sans);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.brand span {
+  color: var(--slate);
+  font-weight: 600;
+}
+
+.brand span::before {
+  content: "-";
+  color: var(--slate);
+  margin-right: 0.02em;
+}
+
 h1,
-.brand,
 .hero-stats dd {
   font-weight: 500;
   letter-spacing: -0.04em;
+  color: var(--fog);
 }
 
 h1 em,
@@ -30,6 +66,12 @@ h2 em {
   font-family: var(--serif);
   font-style: normal;
   font-weight: 600;
+  color: var(--fog);
+}
+
+.eyebrow {
+  color: var(--slate);
+  letter-spacing: 0.16em;
 }
 
 .work-grid--rich {
@@ -85,17 +127,17 @@ h2 em {
 .compare-col {
   padding: 1.35rem 1.4rem 1.5rem;
   border: 1px solid var(--wood);
-  background: var(--cream);
+  background: var(--charcoal);
 }
 
 .compare-col--us {
-  border-color: var(--brick);
+  border-color: var(--slate);
   background: var(--surface-2);
 }
 
 .compare-kicker {
   margin: 0 0 1rem;
-  color: var(--brick);
+  color: var(--slate);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -110,8 +152,8 @@ h2 em {
 
 .compare-col li {
   padding: 0.7rem 0;
-  border-top: 1px solid var(--line);
-  color: var(--ink);
+  border-top: 1px solid rgba(230, 230, 230, 0.08);
+  color: var(--fog);
   font-size: 0.98rem;
   font-weight: 500;
 }
@@ -130,18 +172,18 @@ h2 em {
 .faq-grid details {
   padding: 0.95rem 1.05rem;
   border: 1px solid var(--wood);
-  background: var(--cream);
+  background: var(--charcoal);
 }
 
 .faq-grid summary {
   cursor: pointer;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--fog);
 }
 
 .faq-grid details p {
   margin: 0.7rem 0 0;
-  color: var(--muted);
+  color: var(--slate);
 }
 
 @media (max-width: 720px) {
