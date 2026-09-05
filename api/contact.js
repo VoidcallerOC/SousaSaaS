@@ -1,9 +1,50 @@
+const WINDOW_MS = 15 * 60 * 1000;
+const MAX_POSTS = 5;
+const hits = new Map();
+
+function clientIp(request) {
+  const forwarded = request.headers["x-forwarded-for"];
+  if (typeof forwarded === "string" && forwarded.trim()) {
+    return forwarded.split(",")[0].trim();
+  }
+  const real = request.headers["x-real-ip"];
+  if (typeof real === "string" && real.trim()) {
+    return real.trim();
+  }
+  return request.socket?.remoteAddress || "unknown";
+}
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  if (hits.size > 400) {
+    for (const [key, value] of hits) {
+      if (now - value.start > WINDOW_MS) hits.delete(key);
+    }
+  }
+  const rec = hits.get(ip);
+  if (!rec || now - rec.start > WINDOW_MS) {
+    hits.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  rec.count += 1;
+  return rec.count > MAX_POSTS;
+}
+
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
     return response
       .status(405)
       .json({ ok: false, error: "Method not allowed." });
+  }
+
+  const ip = clientIp(request);
+  if (isRateLimited(ip)) {
+    response.setHeader("Retry-After", "900");
+    return response.status(429).json({
+      ok: false,
+      error: "Too many messages. Wait a bit, or email voidcalleroc@gmail.com.",
+    });
   }
 
   let payload = request.body;
@@ -63,7 +104,7 @@ export default async function handler(request, response) {
 
   const to = process.env.CONTACT_TO_EMAIL || "voidcalleroc@gmail.com";
   const from =
-    process.env.CONTACT_FROM_EMAIL || "Front Window <onboarding@resend.dev>";
+    process.env.CONTACT_FROM_EMAIL || "FORGE CT <onboarding@resend.dev>";
 
   const text = [
     `Name: ${name}`,
