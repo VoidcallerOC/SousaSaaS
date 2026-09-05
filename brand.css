@@ -46,6 +46,15 @@ body {
   background: url("/brand/DTsjw.png") left center / contain no-repeat !important;
 }
 
+.brand img,
+.brand.brand--footer img {
+  display: block !important;
+  width: 220px !important;
+  height: 32px !important;
+  object-fit: contain;
+  border: 0;
+}
+
 .brand span,
 .brand span::before {
   display: none !important;
